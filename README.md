@@ -1,10 +1,6 @@
 <div align="center">
 
-<!-- Add a screenshot of your hero section here. Replace the URL below -->
-<!-- Tip: Take a screenshot, upload it to your repo under /assets/hero.jpg -->
-<!-- Then change the src to: https://raw.githubusercontent.com/pratikpisalpp888/TruthLens/main/assets/hero.jpg -->
-
-<img src="assets/hero.jpg" alt="TruthLens Hero" width="100%" style="border-radius:12px"/>
+<video src="assets/VN20260715_193229.mp4" width="100%" controls autoplay loop muted style="border-radius:12px"></video>
 
 <br/><br/>
 
@@ -20,10 +16,6 @@
 <h3>AI-Powered Loan Document Fraud Detection — 90 Seconds. Court-Ready Evidence.</h3>
 
 <p>Five specialized AI agents. Seven intelligence layers. Completely offline. Built for Indian Banking.</p>
-
-<br/>
-
-[🚀 Live Demo](#) · [📖 Docs](#-tech-stack) · [⚡ Quick Start](#-quick-start)
 
 </div>
 
@@ -233,20 +225,7 @@ TruthLens/
 | **Email** | `admin@canarabank.com` |
 | **Password** | Set in your `.env` as `ADMIN_PASSWORD` |
 
----
 
-## 📸 Screenshots
-
-> Add screenshots to an `assets/` folder in your repo and reference them here.
-
-| Page | Preview |
-|---|---|
-| Landing Page | `assets/landing.png` |
-| Live Analysis | `assets/orchestrator.png` |
-| Case Report | `assets/report.png` |
-| ITR Analysis | `assets/itr.png` |
-
----
 
 ## 🏆 Hackathon
 
