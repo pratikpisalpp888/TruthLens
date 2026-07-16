@@ -1,6 +1,6 @@
 <div align="center">
 
-<video src="assets/VN20260715_193229.mp4" width="100%" controls autoplay loop muted style="border-radius:12px"></video>
+<video src="https://github.com/pratikpisalpp888/TruthLens/raw/main/assets/VN20260715_193229.mp4" width="100%" controls autoplay loop muted style="border-radius:12px"></video>
 
 <br/><br/>
 
