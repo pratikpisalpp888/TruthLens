@@ -1,0 +1,65 @@
+# ─── SECRETS & ENVIRONMENT ─────────────────────────────────
+.env
+*.env
+.env.local
+.env.production
+.env.staging
+
+# ─── PYTHON / BACKEND ──────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+.venv/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.db
+*.sqlite
+*.sqlite3
+truthlens_local.db
+
+# ─── NODE / FRONTEND ───────────────────────────────────────
+node_modules/
+.next/
+.nuxt/
+.output/
+out/
+*.tsbuildinfo
+.turbo/
+
+# ─── LOGS ──────────────────────────────────────────────────
+*.log
+logs/
+*.log.*
+
+# ─── AI MODEL CACHE ────────────────────────────────────────
+data/model_cache/
+*.bin
+*.pt
+*.ckpt
+
+# ─── OS FILES ──────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ─── IDE ───────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ─── DOCKER VOLUMES ────────────────────────────────────────
+volumes/
+
+# ─── TEMP / UPLOADS ────────────────────────────────────────
+/tmp/
+uploads/
+forensics_temp/
