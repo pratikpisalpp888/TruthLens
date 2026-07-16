@@ -1,65 +1,265 @@
-# 🔍 TruthLens: AI-Powered Financial Fraud Detection
+<div align="center">
 
-![TruthLens Dashboard](https://img.shields.io/badge/Status-Live-success?style=for-the-badge) ![Tech Stack](https://img.shields.io/badge/Stack-Next.js%20|%20FastAPI%20|%20Llama%203-blue?style=for-the-badge)
+<!-- Add a screenshot of your hero section here. Replace the URL below -->
+<!-- Tip: Take a screenshot, upload it to your repo under /assets/hero.png -->
+<!-- Then change the src to: https://raw.githubusercontent.com/pratikpisalpp888/TruthLens/main/assets/hero.png -->
 
-**TruthLens** is an enterprise-grade, multi-agent AI system designed specifically for Indian financial institutions to detect loan and document fraud. By combining deep mathematical analysis, image forensics, and Corrective RAG (CRAG), TruthLens moves beyond simple OCR to mathematically and visually verify the authenticity of financial applications.
+<img src="assets/hero.png" alt="TruthLens Hero" width="100%" style="border-radius:12px"/>
 
----
+<br/><br/>
 
-## 🚀 The Core Innovations
+<img src="https://img.shields.io/badge/Built_for-Canara_Bank_SuRaksha_Hackathon-yellow?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEyIDJMMiAyMmgyMEwxMiAyeiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==" />
+&nbsp;
+<img src="https://img.shields.io/badge/Status-Live_Demo-brightgreen?style=for-the-badge&logo=vercel" />
+&nbsp;
+<img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" />
 
-We built TruthLens to think like a seasoned bank fraud investigator. Here are the major innovations that set our pipeline apart:
+<br/><br/>
 
-### 1. Mathematical Fraud Detection (Benford's Law)
-Humans are terrible at faking random numbers. When fraudsters fabricate Bank Statements or ITRs, they naturally use round numbers or unnatural digit distributions.
-* **The Logic:** TruthLens runs extracted financial data through **Benford's Law** (the mathematical law of anomalous numbers) and **Numeric Entropy Analysis**. If the numbers deviate from natural financial distributions, the AI mathematically proves the document is fabricated.
+<h1>🔍 TruthLens</h1>
+<h3>AI-Powered Loan Document Fraud Detection — 90 Seconds. Court-Ready Evidence.</h3>
 
-### 2. Corrective RAG (CRAG) for Regulatory Compliance
-* **The Logic:** Hallucinations are unacceptable in finance. When our AI flags an anomaly, it doesn't just guess what the penalty is. It uses **Corrective RAG (CRAG)** connected to a Qdrant vector database to instantly retrieve the exact **RBI regulations and KYC banking guidelines**, grounding its decision in actual law and providing specific regulatory citations.
+<p>Five specialized AI agents. Seven intelligence layers. Completely offline. Built for Indian Banking.</p>
 
-### 3. GraphRAG (Fraud Network Discovery)
-* **The Logic:** Fraudsters rarely work alone. TruthLens uses **GraphRAG (Graph Retrieval-Augmented Generation)** to connect the dots across historical cases. By mapping relationships between IP addresses, PANs, shared devices, and Forged CA Stamps, the AI instantly detects if an applicant is part of a larger organized fraud ring.
+<br/>
 
-### 4. Visual Fraud Annotations (X-Ray Vision)
-* **The Logic:** Telling a loan officer "there is fraud" isn't enough; they need proof. TruthLens includes a **Visual Annotation Viewer** that overlays colored bounding boxes directly onto the original PDF. Officers can instantly see exactly where the mathematical anomalies, missing fields, or digital forgeries are located on the page.
+[🚀 Live Demo](#) · [📖 Docs](#-tech-stack) · [⚡ Quick Start](#-quick-start)
 
-### 5. Pixel-Level Forgery Detection (ELA)
-* **The Logic:** Using Error Level Analysis (ELA) and compression artifact detection, TruthLens can "see" what the human eye cannot. It detects if a document has been photoshopped, digitally tampered with, or spliced together from multiple sources.
-
-### 6. Military-Grade Data Privacy (Encryption & Local LLMs)
-* **The Logic:** Banks cannot send highly sensitive applicant data (Aadhaar, PAN, Bank records) to public APIs like ChatGPT. 
-    1. **Encryption at Rest:** All uploaded documents are automatically encrypted on disk using AES encryption and only decrypted in memory.
-    2. **Local Llama 3 AI:** TruthLens is powered entirely by a **locally-hosted Llama 3 model (via Ollama)**, ensuring zero PII ever leaves the bank's internal servers.
+</div>
 
 ---
 
-## 🎯 System Architecture: The 5-Agent Pipeline
+## 🎯 What is TruthLens?
 
-Instead of relying on a single AI model, TruthLens orchestrates a specialized pipeline of 5 autonomous agents communicating in real-time:
+TruthLens is an enterprise-grade, **fully offline** multi-agent AI system designed for Indian financial institutions to detect loan document fraud. It replaces days of manual underwriting with a **90-second autonomous AI pipeline** that produces **court-ready, immutable PDF reports** — grounded in actual RBI regulations.
 
-1. **Classifier Agent:** Instantly categorizes uploaded documents (ITR, Bank Statement, PAN) using keyword heuristics.
-2. **Forensic Agent:** Runs mathematical (Benford's Law) and pixel-level (Error Level Analysis) checks.
-3. **CrossRef Agent:** Cross-references extracted data points across *different* documents (e.g., Does the PAN on the tax return match the Bank Statement name?).
-4. **Compliance Agent:** Validates findings against regulatory guidelines using CRAG.
-5. **Decision Agent:** Computes a final composite risk score (0-100) and issues a definitive verdict (APPROVE / FLAG / REJECT).
+> **Built for the Canara Bank SuRaksha Hackathon** — transforming how credit officers detect financial fraud.
 
 ---
 
-## ⚡ Key Features
+## ✨ Core Innovations
 
-* **Real-Time Neural Stream:** The frontend uses WebSockets to stream the exact "thoughts" and logs of the AI agents in real-time as they analyze the document.
-* **AI Interrogator Chat:** A built-in chat interface where loan officers can "interrogate" the AI about why a specific decision was made, what laws apply, or ask it to explain the forensic findings in simple terms.
-* **Instant Extraction:** Uses PyMuPDF as a lightning-fast fallback to instantly read digital PDFs without waiting for slow, traditional visual OCR.
+| Feature | What it does |
+|---|---|
+| 🧮 **Benford's Law Analysis** | Mathematically detects fabricated bank statements & ITRs using digit frequency anomalies |
+| 🧬 **Fraud DNA** | Generates a unique fraud signature and cross-references it against a Qdrant vector database of known fraud patterns |
+| 🕸️ **GraphRAG Network** | Maps relationships across cases — IP addresses, PANs, shared devices — to detect organized fraud rings |
+| 📜 **Corrective RAG (CRAG)** | Zero hallucinations. Every AI decision is grounded in live-retrieved RBI regulations and KYC guidelines |
+| 🔬 **ELA Pixel Forensics** | Error Level Analysis detects digital tampering, photoshopping, and document splicing at the pixel level |
+| 📊 **ITR Deep Analysis** | Parses complex tax returns, validates digital signatures, and flags income vs. bank deposit inconsistencies |
+| 🔒 **AES-256 Encryption** | All documents encrypted at rest. Local Ollama LLM means **zero PII ever leaves the bank's servers** |
+
+---
+
+## 🤖 The 5-Agent Pipeline
+
+```
+📄 Documents Uploaded
+        │
+        ▼
+┌─────────────────┐    ┌──────────────────┐    ┌───────────────────┐
+│  1. Classifier  │───▶│  2. Forensic     │───▶│  3. CrossRef      │
+│  Identify docs  │    │  ELA + Benford's │    │  Cross-validate   │
+└─────────────────┘    └──────────────────┘    └───────────────────┘
+                                                        │
+                              ┌─────────────────────────┘
+                              ▼
+                 ┌──────────────────────┐    ┌────────────────────┐
+                 │  4. Compliance       │───▶│  5. Decision       │
+                 │  RBI + CRAG + DPDP   │    │  Risk Score 0-100  │
+                 └──────────────────────┘    └────────────────────┘
+                                                        │
+                                                        ▼
+                                             📑 Court-Ready Report
+```
 
 ---
 
-## 💻 Tech Stack
+## 🛠️ Tech Stack
 
-* **Frontend:** Next.js (React), TailwindCSS, Framer Motion (for dynamic, premium animations)
-* **Backend:** FastAPI (Python), WebSockets
-* **AI & NLP:** Llama 3 (via Ollama), LangGraph principles, PyMuPDF
-* **Knowledge Base:** Qdrant (Vector Database)
-* **Storage:** Local encrypted file storage (MinIO compatible)
+### Backend
+![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=flat-square&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.110-009688?style=flat-square&logo=fastapi&logoColor=white)
+![LangGraph](https://img.shields.io/badge/LangGraph-Agentic_AI-purple?style=flat-square)
+![Ollama](https://img.shields.io/badge/Ollama-Local_LLM-black?style=flat-square)
+![Qdrant](https://img.shields.io/badge/Qdrant-Vector_DB-red?style=flat-square)
+![SQLite](https://img.shields.io/badge/SQLite-Database-003B57?style=flat-square&logo=sqlite&logoColor=white)
+
+### Frontend
+![Next.js](https://img.shields.io/badge/Next.js-14-black?style=flat-square&logo=nextdotjs)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Tailwind](https://img.shields.io/badge/TailwindCSS-3-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-Animations-pink?style=flat-square)
+
+### AI / ML
+![Sentence Transformers](https://img.shields.io/badge/Sentence_Transformers-Embeddings-orange?style=flat-square)
+![OpenCV](https://img.shields.io/badge/OpenCV-Forensics-5C3EE8?style=flat-square&logo=opencv)
+![PyMuPDF](https://img.shields.io/badge/PyMuPDF-OCR-green?style=flat-square)
+![spaCy](https://img.shields.io/badge/spaCy-NER-09A3D5?style=flat-square)
 
 ---
-*Built to bring truth, speed, and mathematical certainty to financial underwriting.*
+
+## ⚡ Quick Start
+
+### Prerequisites
+
+Make sure you have the following installed:
+- [Python 3.11+](https://www.python.org/downloads/)
+- [Node.js 18+](https://nodejs.org/)
+- [Ollama](https://ollama.ai/) (for local LLM)
+
+---
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/pratikpisalpp888/TruthLens.git
+cd TruthLens
+```
+
+### 2️⃣ Set Up Environment Variables
+
+```bash
+cp .env.example .env
+# Open .env and fill in your configuration values
+```
+
+### 3️⃣ Backend Setup
+
+```bash
+cd backend
+
+# Create and activate virtual environment
+python -m venv venv
+
+# Windows
+venv\Scripts\activate
+
+# macOS / Linux
+source venv/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run database migrations
+python scripts/setup_db.py
+
+# Seed the knowledge base
+python scripts/seed_knowledge_base.py
+python scripts/seed_fraud_patterns.py
+python scripts/seed_admin.py
+
+# Start the backend server
+uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+```
+
+Backend will be live at: **http://localhost:8000**
+API Docs at: **http://localhost:8000/docs**
+
+---
+
+### 4️⃣ Frontend Setup
+
+```bash
+cd frontend
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+```
+
+Frontend will be live at: **http://localhost:3000**
+
+---
+
+### 5️⃣ Set Up Local LLM (Ollama)
+
+```bash
+# Install Ollama from https://ollama.ai then run:
+ollama pull phi3:mini
+ollama serve
+```
+
+---
+
+### 6️⃣ Docker (All-in-One)
+
+```bash
+# From the project root
+docker-compose up --build
+```
+
+---
+
+## 📁 Project Structure
+
+```
+TruthLens/
+├── backend/                    # FastAPI Python backend
+│   ├── app/
+│   │   ├── agents/             # 5 LangGraph AI agents
+│   │   ├── extractors/         # Document extractors (ITR, PAN, etc.)
+│   │   ├── forensics/          # ELA, Benford's, pixel analysis
+│   │   ├── rag/                # CRAG + GraphRAG implementation
+│   │   ├── services/           # Business logic layer
+│   │   └── routers/            # FastAPI route handlers
+│   ├── scripts/                # DB seeding & setup scripts
+│   └── requirements.txt
+│
+├── frontend/                   # Next.js 14 TypeScript frontend
+│   ├── app/                    # Next.js App Router pages
+│   │   ├── (public)/           # Landing, login, about pages
+│   │   └── (protected)/        # Dashboard, cases, reports
+│   ├── components/
+│   │   ├── landing/            # Landing page sections
+│   │   └── ui/                 # Reusable UI components
+│   └── stores/                 # Zustand state management
+│
+├── .env.example                # Environment variable template
+├── docker-compose.yml          # Full stack Docker setup
+└── README.md
+```
+
+---
+
+## 🔐 Default Login Credentials
+
+> ⚠️ Change these immediately in production via your `.env` file.
+
+| Field | Value |
+|---|---|
+| **Email** | `admin@canarabank.com` |
+| **Password** | Set in your `.env` as `ADMIN_PASSWORD` |
+
+---
+
+## 📸 Screenshots
+
+> Add screenshots to an `assets/` folder in your repo and reference them here.
+
+| Page | Preview |
+|---|---|
+| Landing Page | `assets/landing.png` |
+| Live Analysis | `assets/orchestrator.png` |
+| Case Report | `assets/report.png` |
+| ITR Analysis | `assets/itr.png` |
+
+---
+
+## 🏆 Hackathon
+
+This project was built for the **Canara Bank SuRaksha Hackathon**, targeting the problem of rising sophisticated loan document fraud in the Indian banking ecosystem.
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+
+---
+
+<div align="center">
+  <strong>Built with ❤️ for Indian Banking — TruthLens, Detecting the Unseen.</strong>
+</div>
