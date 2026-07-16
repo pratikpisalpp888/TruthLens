@@ -1,10 +1,10 @@
 <div align="center">
 
 <!-- Add a screenshot of your hero section here. Replace the URL below -->
-<!-- Tip: Take a screenshot, upload it to your repo under /assets/hero.png -->
-<!-- Then change the src to: https://raw.githubusercontent.com/pratikpisalpp888/TruthLens/main/assets/hero.png -->
+<!-- Tip: Take a screenshot, upload it to your repo under /assets/hero.jpg -->
+<!-- Then change the src to: https://raw.githubusercontent.com/pratikpisalpp888/TruthLens/main/assets/hero.jpg -->
 
-<img src="assets/hero.png" alt="TruthLens Hero" width="100%" style="border-radius:12px"/>
+<img src="assets/hero.jpg" alt="TruthLens Hero" width="100%" style="border-radius:12px"/>
 
 <br/><br/>
 
