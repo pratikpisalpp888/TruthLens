@@ -12,7 +12,7 @@ https://github.com/pratikpisalpp888/TruthLens/raw/main/assets/VN20260715_193229.
 
 <br/><br/>
 
-<h1>🔍 TruthLens</h1>
+<h1> TruthLens</h1>
 <h3>AI-Powered Loan Document Fraud Detection — 90 Seconds. Court-Ready Evidence.</h3>
 
 <p>Five specialized AI agents. Seven intelligence layers. Completely offline. Built for Indian Banking.</p>
