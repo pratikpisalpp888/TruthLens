@@ -6,9 +6,6 @@ https://github.com/pratikpisalpp888/TruthLens/raw/main/assets/VN20260715_193229.
 
 <img src="https://img.shields.io/badge/Built_for-Canara_Bank_SuRaksha_Hackathon-yellow?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEyIDJMMiAyMmgyMEwxMiAyeiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==" />
 &nbsp;
-<img src="https://img.shields.io/badge/Status-Live_Demo-brightgreen?style=for-the-badge&logo=vercel" />
-&nbsp;
-<img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" />
 
 <br/><br/>
 
